@@ -1,0 +1,3 @@
+sim/*.vvp
+*.vcd
+__pycache__/
