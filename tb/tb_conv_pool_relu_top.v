@@ -54,7 +54,10 @@ module tb_conv_pool_relu_top;
 
     reg clk = 1'b0;
     reg rst_n = 1'b0;
-    always #5 clk = ~clk;   // 100 MHz
+    always #5 clk = ~clk;   // 100 MHz'
+
+    // Counter Signal
+    reg [31:0] cycle_view = 0;
 
     reg                                pix_valid = 1'b0;
     reg  [DATA_W-1:0]                  pix_data  = {DATA_W{1'b0}};
@@ -148,6 +151,8 @@ module tb_conv_pool_relu_top;
 
     always @(posedge clk) begin
         cyc = cyc + 1;
+        cycle_view <= cycle_view + 1;
+        
         if (pix_valid && !started) begin
             started = 1'b1;
             t_first = cyc;

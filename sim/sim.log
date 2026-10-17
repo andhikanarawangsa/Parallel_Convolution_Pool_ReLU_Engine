@@ -171,4 +171,4 @@ VCD info: dumpfile sim/tb_conv_pool_relu_top.vcd opened for output.
 ALL TESTS PASSED
 ==================================================
 
-tb/tb_conv_pool_relu_top.v:365: $finish called at 33470000 (1ps)
+tb/tb_conv_pool_relu_top.v:370: $finish called at 33470000 (1ps)
